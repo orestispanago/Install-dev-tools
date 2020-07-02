@@ -17,3 +17,5 @@ pip install matplotlib
 pip install seaborn
 
 conda config --set auto_activate_base false
+
+rm Miniconda3-latest-Linux-x86_64.sh
