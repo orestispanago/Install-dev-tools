@@ -1,4 +1,5 @@
 #!/bin/bash
+sudo apt install curl
 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
@@ -13,23 +14,28 @@ sudo chmod +x /usr/local/bin/docker-compose
 curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+# flatpaks
+# flatpak install flathub com.axosoft.GitKraken -y
+# flatpak install flathub com.spotify.Client -y
+# flatpak install flathub com.getpostman.Postman -y
+# flatpak install flathub com.anydesk.Anydesk -y
+# flatpak install flathub io.atom.Atom -y
+# flatpak install flathub com.microsoft.Teams -y
+# flatpak install flathub org.gnome.DejaDup -y
 
-flatpak install flathub com.axosoft.GitKraken -y
-flatpak install flathub com.spotify.Client -y
-flatpak install flathub com.getpostman.Postman -y
-flatpak install flathub com.anydesk.Anydesk -y
-flatpak install flathub io.atom.Atom -y
-flatpak install flathub com.microsoft.Teams -y
-flatpak install flathub org.gnome.DejaDup -y
+# snaps
+snap install gitkraken --classic
+snap install spotify postman
 
+wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.21-1ubuntu20.04_amd64.deb
+wget https://download.anydesk.com/linux/anydesk_6.0.1-1_amd64.deb
+wget https://atom-installer.github.com/v1.50.0/atom-amd64.deb
+wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
 
-wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.20-1ubuntu18.04_amd64.deb
-wget https://download3.operacdn.com/pub/opera/desktop/69.0.3686.57/linux/opera-stable_69.0.3686.57_amd64.deb
 sudo dpkg -i *.deb
 sudo apt-get install -f -y
-rm mysql-workbench-community_8.0.20-1ubuntu18.04_amd64.deb
-#
-#
+rm *.deb
+
 # Install jdk if not present on system
  sudo apt-get install -y openjdk-8-jdk
 
