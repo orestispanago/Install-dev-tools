@@ -1,12 +1,17 @@
 #!/bin/bash
 sudo apt install curl
 
+# pip + pipenv
+apt install python3-pip
+pip3 install pipenv
+
+# docker 
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
 rm get-docker.sh
 
-# Install docker-compose
+# docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
@@ -26,6 +31,7 @@ sudo apt-get install -y nodejs
 # snaps
 snap install gitkraken --classic
 snap install spotify postman
+snap install pycharm-community --classic
 
 wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.21-1ubuntu20.04_amd64.deb
 wget https://download.anydesk.com/linux/anydesk_6.0.1-1_amd64.deb
