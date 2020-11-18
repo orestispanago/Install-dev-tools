@@ -2,7 +2,7 @@
 sudo apt install curl
 
 # pip + pipenv
-apt install python3-pip
+apt install python3-pip -y
 pip3 install pipenv
 
 # docker 
@@ -32,11 +32,12 @@ sudo apt-get install -y nodejs
 snap install gitkraken --classic
 snap install spotify postman
 snap install pycharm-community --classic
+echo snap >> ~/.hidden
 
 wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.21-1ubuntu20.04_amd64.deb
-wget https://download.anydesk.com/linux/anydesk_6.0.1-1_amd64.deb
+#wget https://download.anydesk.com/linux/anydesk_6.0.1-1_amd64.deb
 wget https://atom-installer.github.com/v1.50.0/atom-amd64.deb
-wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
+#wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
 
 sudo dpkg -i *.deb
 sudo apt-get install -f -y
@@ -48,10 +49,3 @@ rm *.deb
 # Run netbeans installer only if it does not work from home folder restore
 # wget http://download.netbeans.org/netbeans/8.2/rc/bundles/netbeans-8.2-javaee-linux.sh
 # sudo sh netbeans-8.2-javaee-linux.sh
-
-# Brave browser 
-sudo apt install apt-transport-https curl gnupg
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser -y
