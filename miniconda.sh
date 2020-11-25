@@ -5,7 +5,7 @@ INSTALL_DIR=$HOME/.miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # -b: Silent install -p: path
-bash Miniconda3-latest-Linux-x86_64.sh -b -p INSTALL_DIR
+bash Miniconda3-latest-Linux-x86_64.sh -b -p $INSTALL_DIR
 
 eval "$(${INSTALL_DIR}/bin/conda shell.bash hook)"
 conda init
@@ -14,11 +14,13 @@ conda init
 conda install spyder -y
 conda install jupyter -y
 
+conda config --set auto_activate_base false
+
+apt install python3-pip -y
+
 pip install pandas
 pip install matplotlib
 pip install seaborn
-
-conda config --set auto_activate_base false
 
 rm Miniconda3-latest-Linux-x86_64.sh
 
@@ -42,11 +44,14 @@ StartupWMClass=Spyder" > ~/.local/share/applications/spyder.desktop
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
-echo "${red}WARNING:
+
+echo "
+${red}WARNING:
 ${reset}Launching spyder in a graphical way (from a desktop shortcut)
 will not load ~/.barhrc variables e.g. PATH
 If they are required in your app, you may:
-1. set them at each run using os.environ, or
-2. Launch spyder from terminal using
+1. Set them in your script before each run using os.environ or
+2. Launch spyder from terminal with:
 
-conda activate base && spyder"
+conda activate base && spyder
+"
