@@ -21,6 +21,7 @@ sudo dpkg -i *.deb
 sudo apt-get install -f -y
 rm *.deb
 
+# incremental history search
 bash inputrc.sh
 
 bash docker_and_compose.sh

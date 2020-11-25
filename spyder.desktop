@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Spyder
+GenericName=Spyder
+Comment=The Scientific Python Development Environment
+Icon=/home/orestis/.miniconda3/share/icons/spyder3.png
+TryExec=/home/orestis/.miniconda3/bin/spyder
+Exec=/home/orestis/.miniconda3/bin/spyder
+Terminal=false
+MimeType=text/x-python;
+Categories=Development;Science;IDE;Qt;
+Keywords=Development;Science;IDE;Qt;
+StartupNotify=true
+StartupWMClass=Spyder
