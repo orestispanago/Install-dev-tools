@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=ParaView
-Comment=Parallel visualization application
-Exec=/home/orestis/Programs/ParaView-5.8.1-MPI-Linux-Python3.7-64bit/bin/paraview
-Icon=/home/orestis/Programs/ParaView-5.8.1-MPI-Linux-Python3.7-64bit/share/icons/hicolor/96x96/apps/paraview.png
-Version=1.0
-Type=Application
-Terminal=0

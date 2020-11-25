@@ -1,8 +1,12 @@
 #!/bin/bash
 
-wget -N https://www.meso-star.com/projects/solstice/downloads/Solstice-0.9.0-GNU-Linux64.tar.gz -P ~/Downloads
+INSTALL_DIR=~/Programs
 
-mkdir ~/Programs
-tar -xzf ~/Downloads/Solstice-0.9.0-GNU-Linux64.tar.gz --skip-old-files --directory ~/Programs
+wget -N https://www.meso-star.com/projects/solstice/downloads/Solstice-0.9.0-GNU-Linux64.tar.gz
 
-echo source ~/Programs/Solstice-0.9.0-GNU-Linux64/etc/solstice.profile >> ~/.bashrc
+mkdir $INSTALL_DIR
+tar -xzf Solstice-0.9.0-GNU-Linux64.tar.gz --skip-old-files --directory $INSTALL_DIR
+
+echo source $INSTALL_DIR/Solstice-0.9.0-GNU-Linux64/etc/solstice.profile >> ~/.bashrc
+
+rm -rf Solstice-0.9.0-GNU-Linux64.tar.gz
