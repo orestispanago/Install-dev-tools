@@ -35,3 +35,5 @@ bash paraview.sh
 bash solstice.sh
 
 bash brave_browser.sh
+
+bash jekyll.sh
