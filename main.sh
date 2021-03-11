@@ -7,7 +7,7 @@ pip3 install pipenv
 
 # snaps
 snap install gitkraken --classic
-snap install spotify postman
+snap install spotify postman viber-unofficial telegram-desktop skype
 snap install pycharm-community --classic
 echo snap >> ~/.hidden
 
