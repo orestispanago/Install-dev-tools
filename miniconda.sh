@@ -41,6 +41,18 @@ Keywords=Development;Science;IDE;Qt;
 StartupNotify=true
 StartupWMClass=Spyder" > ~/.local/share/applications/spyder.desktop
 
+echo "[Desktop Entry]
+Name=Jupyter Notebook
+Comment=Run Jupyter Notebook
+Exec=${INSTALL_DIR}/bin/jupyter-notebook
+Terminal=true
+Type=Application
+Icon=${INSTALL_DIR}/share/icons/hicolor/scalable/apps/notebook.svg
+StartupNotify=true
+MimeType=application/x-ipynb+json;
+Categories=Development;Education;
+Keywords=python;" > ~/.local/share/applications/jupyter-notebook.desktop
+
 red=`tput setaf 1`
 green=`tput setaf 2`
 reset=`tput sgr0`
@@ -51,7 +63,6 @@ ${reset}Launching spyder in a graphical way (from a desktop shortcut)
 will not load ~/.barhrc variables e.g. PATH
 If they are required in your app, you may:
 1. Set them in your script before each run using os.environ or
-2. Launch spyder from terminal with:
-
+2. Launch spyder from bash shell:
 conda activate base && spyder
 "
